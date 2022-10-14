@@ -1,28 +1,35 @@
 # Development
 Please have python3 installed to run this project on terminal:
 [Python3 Installation](https://www.python.org/downloads/)
+Also install Xampp for DB and server
+[Xampp Installation](https://www.apachefriends.org/download.html)
 
 # Project Title
 A URL Shortener is a tool that creates a short, unique URL that will redirect to the specific website of your choosing
 
 ## Prerequisites
-Modules used in this app are Flask and PyShortener and 
-Xampp is used for DB and server
+Modules used in this app are Flask and PyShortene
 
 ## Initial Setup:
 
-Start MySQL and Apache server from the Xampp control panel.
+**Create DB and start Server**
+1. Start MySQL and Apache server from the Xampp control panel.
+2. Now go to MySQL Server Admin page -> SQL.
+3. Now we will initialize the database schema.
+4. For this, paste the queries given in initialize.sql in the SQL window and click on go (created local DB).
 
-Initialize Database schema by going to MySQL Server admin page and passing the queries given in initialize.sql
-(This will create your local DB)
+#### NOTE: If you have changed the database name in the query then change it in other files too (app.py) 
 
-**Create Config file:**
-The settings.py is going to fetch values from this file. 
-So create a .env file in you base project folder.
-Enter required values according to your local database and preferences
+**Create Config file**
+1. The settings.py is going to fetch values from this file. 
+2. So create a .env file in you base project folder.
+3. Enter required values according to your local database and preferences.
 
 ![image](https://user-images.githubusercontent.com/91799448/195096797-06ab99de-d2f6-4453-948a-2f875af7e554.png)
 
+#### NOTE: we use file types like .env as they are ignored by github on pushing to repo. This is done because it contains your local configs for your system and may contain sensitive info.
+
+**Setting Environment**
 Install the Virtual Environment module
 
     pip install virtualenv
